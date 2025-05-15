@@ -4,3 +4,25 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/* Main */
+.wrapper {
+    background-color: aqua;
+    height: 100vh;
+}
+
+.sidebar {
+    background-color: blueviolet;
+    height: 100%;
+    width: 230px;
+}
+
+.top {
+    background-color: black;
+    height: calc(100% - 70px);
+}
+
+.bottom {
+    background-color: brown;
+    height: 70px;
+}
