@@ -102,6 +102,7 @@ ul {
 .wrapper {
     height: 100vh;
     overflow: hidden;
+    position: absolute;
     
     &>.top {
         background-color: black;
@@ -119,6 +120,17 @@ ul {
             height: 100%;
             width: calc(100% - 50px);
             overflow-y: auto;
+
+            .upgrade {
+                background-color: #28282877;
+                min-height: 50px;
+                width: calc(100% - 50px);
+                position: fixed;
+            }
+
+            .navbar {
+                margin-top: 60px;
+            }
         }
     }
 
