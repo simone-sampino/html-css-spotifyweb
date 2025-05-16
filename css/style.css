@@ -17,15 +17,21 @@
 }
 /* #endregion Root */
 
-/* Generics */
+/* #region Generics */
 body {
     font-family: sans-serif;
 }
 
+ul {
+    list-style: none;
+}
+/* #endregion Generics */
+
 /* #region Utils */
+/* Mobile First 320px */
 .container {
-    width: 90%;
-    max-width: 500px; /* modificare */
+    width: 85%;
+    max-width: 300px;
     margin: 0 auto;
 }
 
@@ -94,7 +100,6 @@ body {
 
 /* Debug */
 .wrapper {
-    background-color: aqua;
     height: 100vh;
     overflow: hidden;
     
@@ -123,4 +128,40 @@ body {
     }
 }
 
+.row {
+    margin-bottom: 2rem;
+}
+
+.col-6 {
+    background-color: blue;
+    min-height: 100px;
+    width: 100px;
+    margin: 5px;
+}
+
 /* Main */
+main {
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+/* Media Queries */
+
+/* Mobile Large */
+@media screen and (min-width: 425px) {
+    .container {
+        width: 90%;
+        max-width: 400px;
+    }
+
+    .wrapper .top .sidebar {
+        width: 230px;
+    }
+}
+
+/* Tablet */
+
+/* Desktop */
