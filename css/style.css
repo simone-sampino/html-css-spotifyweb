@@ -12,7 +12,8 @@
     --dark: #000;
     --gray: #73757B;
     --primary: #141922;
-    --secondary: #282828;
+    --secondary: #282828; /* serve? */
+    --semi-transparent: rgba(8, 11, 18, 0.5);
     --lines: #ADFF2F;
 }
 /* #endregion Root */
@@ -20,6 +21,7 @@
 /* #region Generics */
 body {
     font-family: sans-serif;
+    color: var(--light);
 }
 
 ul {
@@ -104,47 +106,6 @@ img {
 /* #endregion Utils */
 
 /* Debug */
-.wrapper {
-    height: 100vh;
-    overflow: hidden;
-    position: absolute;
-    
-    &>.top {
-        background-color: black;
-        height: calc(100% - 70px);
-        display: flex;
-
-        .sidebar {
-            background-color: blueviolet;
-            height: 100%;
-            width: 50px;
-        }
-
-        main {
-            background-color: chartreuse;
-            height: 100%;
-            width: calc(100% - 50px);
-            overflow-y: auto;
-
-            .upgrade {
-                background-color: #28282877;
-                min-height: 50px;
-                width: calc(100% - 50px);
-                position: fixed;
-            }
-
-            .navbar {
-                margin-top: 60px;
-            }
-        }
-    }
-
-    &>.bottom {
-        background-color: brown;
-        height: 70px;
-    }
-}
-
 .row {
     margin-bottom: 2rem;
 }
@@ -156,43 +117,101 @@ img {
     margin: 5px;
 }
 
-/* Sidebar */
-.sidebar {
+/* Body */
+.wrapper {
+    height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    
+    /* Main Top */
+    &>.top {
+        height: calc(100% - 70px);
+        display: flex;
 
-    .top {
+        /* Sidebar */
+        .sidebar {
+            background-color: var(--dark);
+            height: 100%;
+            width: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
 
-        #logo {
-            margin-bottom: 0.5rem;
-        }
+            .top {
+                margin-top: 0.3rem;
 
-        img {
-                height: 24px;
-                margin-bottom: 0.2rem;
-                margin: 0 13px;
+                #logo-small {
+                    margin-bottom: 0.5rem;
+                }
+
+                #logo {
+                    display: none;
+                }
+
+                .playlist {
+                    display: none;
+                }
             }
 
-        span {
-            display: none;
+            img {
+                margin-bottom: 0.2rem;
+                width: 50%;
+                margin-left: calc((50px - 50%) / 2); /* soluzione migliore? */
+                /* align-self: center; */
+                /* margin: 0 13px; */
+            }
+
+            span {
+                display: none;
+            }
+
+            .bottom {
+
+                .download {
+                    margin: 0 5px;
+                }
+            }
+        }
+        
+        /* Main */
+        main {
+            background-color: var(--primary);
+            height: 100%;
+            width: calc(100% - 50px);
+            overflow-y: auto;
+
+            .upgrade {
+                background-color: var(--semi-transparent);
+                min-height: 50px;
+                width: calc(100% - 50px);
+                position: fixed;
+                z-index: 100;
+            }
+
+            .navbar {
+                margin-top: 60px;
+
+                ul {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    text-transform: uppercase;
+                    font-size: 0.5rem;
+                    gap: 1rem;
+                }
+            }
         }
     }
-}
 
-
-/* Main */
-main {
-
-    ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        text-transform: uppercase;
-        font-size: 0.5rem;
-        gap: 1rem;
+    /* Main Bottom */
+    &>.bottom {
+        background-color: brown;
+        height: 70px;
     }
 }
 
 /* Media Queries */
-
 /* Mobile Large */
 @media screen and (min-width: 425px) {
     .container {
@@ -201,7 +220,39 @@ main {
     }
 
     .wrapper .top .sidebar {
-        width: 230px;
+        max-width: 230px;
+
+        .top {
+            
+            .main-menu {
+                display: flex;
+                flex-direction: column;
+            }
+
+            #logo-small {
+                display: none;
+            }
+
+            #logo {
+                display: block;
+            }
+
+            .playlist {
+                display: inline;
+                font-size: 0.8rem;
+            }
+
+            span {
+                display: inline;
+                font-size: 0.8rem;
+            }
+        }
+
+        img {
+            margin-bottom: 0.2rem;
+            width: 50%;
+            margin-left: calc((50px - 50%) / 2);
+        }
     }
 }
 
