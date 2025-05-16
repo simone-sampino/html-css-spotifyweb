@@ -25,13 +25,18 @@ body {
 ul {
     list-style: none;
 }
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
 /* #endregion Generics */
 
 /* #region Utils */
-/* Mobile First 320px */
+/* Mobile First 375px */
 .container {
     width: 85%;
-    max-width: 300px;
+    max-width: 350px;
     margin: 0 auto;
 }
 
@@ -151,12 +156,38 @@ ul {
     margin: 5px;
 }
 
+/* Sidebar */
+.sidebar {
+
+    .top {
+
+        #logo {
+            margin-bottom: 0.5rem;
+        }
+
+        img {
+                height: 24px;
+                margin-bottom: 0.2rem;
+                margin: 0 13px;
+            }
+
+        span {
+            display: none;
+        }
+    }
+}
+
+
 /* Main */
 main {
 
     ul {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
+        text-transform: uppercase;
+        font-size: 0.5rem;
+        gap: 1rem;
     }
 }
 
