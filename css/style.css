@@ -23,6 +23,12 @@ body {
 }
 
 /* #region Utils */
+.container {
+    width: 90%;
+    max-width: 500px; /* modificare */
+    margin: 0 auto;
+}
+
 .row {
     display: flex;
     flex-wrap: wrap;
@@ -35,8 +41,6 @@ body {
 
 .col {
     width: auto;
-    flex-basis: auto;
-    flex-grow: 1;
 }
 
 .col-1 {
@@ -88,65 +92,35 @@ body {
 }
 /* #endregion Utils */
 
-
-
-
-
-
-
-
 /* Debug */
-/* Main */
 .wrapper {
     background-color: aqua;
     height: 100vh;
+    overflow: hidden;
+    
+    &>.top {
+        background-color: black;
+        height: calc(100% - 70px);
+        display: flex;
+
+        .sidebar {
+            background-color: blueviolet;
+            height: 100%;
+            width: 50px;
+        }
+
+        main {
+            background-color: chartreuse;
+            height: 100%;
+            width: calc(100% - 50px);
+            overflow-y: auto;
+        }
+    }
+
+    &>.bottom {
+        background-color: brown;
+        height: 70px;
+    }
 }
 
-.top {
-    background-color: black;
-    height: calc(100% - 70px);
-    display: flex;
-}
-
-.top-left {
-    background-color: blueviolet;
-    height: 100%;
-    width: 230px;
-}
-
-.top-right {
-    background-color: chartreuse;
-    height: 100%;
-    width: calc(100% - 230px);
-}
-
-.upgrade {
-    background-color: burlywood;
-    height: 50px;
-}
-
-ul {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    list-style: none;
-    justify-content: center;
-    text-transform: uppercase;
-}
-
-.bottom {
-    background-color: brown;
-    height: 70px;
-}
-
-.row {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.col {
-    background-color: blue;
-    height: 200px;
-    width: 200px;
-    margin: 1rem;
-}
+/* Main */
