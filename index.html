@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,16 +19,23 @@
                         <img id="logo-small" src="./img/logo-small.svg" alt="spotify logo small">
                         <img id="logo" src="./img/logo.svg" alt="spotify logo">
                     </div>
+                    <!-- Menu -->
                     <div class="main-menu">
-                        <img src="./img/home.svg" alt="home">
-                        <span>Home</span>
-                        <img src="./img/search.svg" alt="search">
-                        <span>Cerca</span>
-                        <img src="./img/libreria.svg" alt="library">
-                        <span>La tua libreria</span>
+                        <ul>
+                            <li><img src="./img/home.svg" alt="home">
+                                <span class="t-white">Home</span>
+                            </li>
+                            <li><img src="./img/search.svg" alt="search">
+                                <span>Cerca</span>
+                            </li>
+                            <li><img src="./img/libreria.svg" alt="library">
+                                <span>La tua libreria</span>
+                            </li>
+                        </ul>
                     </div>
+                    <!-- Playlist -->
                     <div class="playlist">
-                        <h3>playlist</h3>
+                        <h3 class="t-white">playlist</h3>
                         <ul>
                             <li>Crea Playlist</li>
                             <li>Nome Playlist</li>
@@ -49,11 +57,11 @@
                     <hr>
                     <div class="profile">
                         <img src="./img/profile.svg" alt="profile">
-                        <span>John Doe</span>
+                        <span class="t-white">John Doe</span>
                     </div>
                 </div>
             </div>
-            
+
             <!-- Main -->
             <main>
                 <div class="upgrade">effettua l'upgrade</div>
@@ -68,14 +76,66 @@
                             <li>scopri</li>
                         </ul>
                     </div>
-                    <div class="row">
-                        <div class="col-6 col-md-3 col-lg-2"></div>
-                        <div class="col-6 col-md-3 col-lg-2"></div>
-                        <div class="col-6 col-md-3 col-lg-2"></div>
-                        <div class="col-6 col-md-3 col-lg-2"></div>
-                        <div class="col-6 col-md-3 col-lg-2"></div>
-                        <div class="col-6 col-md-3 col-lg-2"></div>
-                    </div>
+                    <!-- Recently Played -->
+                    <section class="recently-played">
+                        <h2>Recently played</h2>
+                        <div class="row">
+                            <div class="col-6 col-md-3 col-lg-2">
+                                <figure>
+                                    <img src="./img/metal_lifting.jpg" alt="heavy metal">
+                                    <figcaption>
+                                        Heavy Metal
+                                        <span>Subtitle</span>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-6 col-md-3 col-lg-2">
+                                <figure>
+                                    <img src="./img/metal_lifting.jpg" alt="heavy metal">
+                                    <figcaption>
+                                        Heavy Metal
+                                        <span>Subtitle</span>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-6 col-md-3 col-lg-2">
+                                <figure>
+                                    <img src="./img/metal_lifting.jpg" alt="heavy metal">
+                                    <figcaption>
+                                        Heavy Metal
+                                        <span>Subtitle</span>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-6 col-md-3 col-lg-2">
+                                <figure>
+                                    <img src="./img/metal_lifting.jpg" alt="heavy metal">
+                                    <figcaption>
+                                        Heavy Metal
+                                        <span>Subtitle</span>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-6 col-md-3 col-lg-2">
+                                <figure>
+                                    <img src="./img/metal_lifting.jpg" alt="heavy metal">
+                                    <figcaption>
+                                        Heavy Metal
+                                        <span>Subtitle</span>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-6 col-md-3 col-lg-2">
+                                <figure>
+                                    <img src="./img/metal_lifting.jpg" alt="heavy metal">
+                                    <figcaption>
+                                        Heavy Metal
+                                        <span>Subtitle</span>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </section>
                     <div class="row">
                         <div class="col-6 col-md-3 col-lg-2"></div>
                         <div class="col-6 col-md-3 col-lg-2"></div>
@@ -90,6 +150,7 @@
 
         <div class="bottom"></div>
     </div>
-    
+
 </body>
+
 </html>
