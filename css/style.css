@@ -131,7 +131,7 @@ body * {
   overflow: hidden;
   position: absolute;
 
-  /* Main Top */
+  /* Wrapper Top */
   & > .top {
     height: calc(100% - 70px);
     display: flex;
@@ -202,10 +202,24 @@ body * {
           gap: 1rem;
         }
       }
+
+      figcaption {
+        font-size: 0.7rem;
+        font-weight: 600;
+        text-align: center;
+        margin-top: 0.6rem;
+
+        span {
+          display: block;
+          color: var(--gray);
+          font-size: 0.55rem;
+          margin: 0.5rem 0;
+        }
+      }
     }
   }
 
-  /* Main Bottom */
+  /* Wrapper Bottom */
   & > .bottom {
     background-color: brown;
     height: 70px;
