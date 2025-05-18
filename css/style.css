@@ -115,9 +115,15 @@ img {
   overflow: hidden;
   position: absolute;
 
+  span {
+    display: block;
+    color: var(--gray);
+    font-size: 0.55rem;
+  }
+
   /* Wrapper Top */
   & > .top {
-    height: calc(100% - 60px);
+    height: calc(100% - 80px);
     display: flex;
 
     /* Sidebar */
@@ -164,8 +170,10 @@ img {
         }
 
         .profile {
-          background-color: var(--gray);
-          border-radius: 50%;
+          img {
+            background-color: var(--gray);
+            border-radius: 50%;
+          }
         }
       }
     }
@@ -216,28 +224,36 @@ img {
         }
       }
 
+      .recently-played {
+        h2 {
+          margin-bottom: 1.5rem;
+        }
+      }
+
       img {
-        margin-top: 1.5rem;
-        margin-right: 10px;
+        margin-bottom: 0.8rem;
       }
 
       figcaption {
         font-size: 0.7rem;
         font-weight: 600;
         text-align: center;
-        margin-top: 0.6rem;
       }
 
       span {
-        display: block;
-        color: var(--gray);
-        font-size: 0.55rem;
         margin: 0.5rem 0;
+      }
+
+      .created-for {
+        img {
+          margin-top: 1rem;
+        }
       }
 
       .most-popular {
         img {
           border-radius: 50%;
+          margin-top: 1rem;
         }
       }
     }
@@ -245,8 +261,57 @@ img {
 
   /* Wrapper Bottom */
   & > .bottom {
+    display: flex;
+    /* justify-content: space-between; */
     background-color: var(--secondary);
-    height: 60px;
+    height: 80px;
+
+    figure {
+      display: flex;
+
+      img {
+        height: 40px;
+        margin: 20px 10px;
+      }
+
+      figcaption {
+        margin-top: 1.5rem;
+        font-size: 0.7rem;
+      }
+    }
+
+    i {
+      font-size: 0.7rem;
+    }
+
+    .interactions {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      color: var(--gray);
+      margin: 1.5rem 1rem;
+    }
+
+    .player {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 1rem;
+      border-bottom: 3px solid gray;
+
+      .fa-circle-play {
+        font-size: 1.3rem;
+        margin: -0.2rem 0.8rem 0;
+      }
+    }
+
+    .running-time {
+      display: flex;
+
+      .playback-progress {
+        /* border: 1px solid gray;
+            border-width: 5px; */
+      }
+    }
   }
 }
 
@@ -274,6 +339,15 @@ img {
       .main-menu {
         display: flex;
         flex-direction: column;
+
+        ul {
+          .line {
+            display: inline;
+            margin-left: -1rem;
+            padding-left: 13px;
+            border-left: 3px solid var(--lines);
+          }
+        }
       }
 
       #logo-small {
@@ -292,6 +366,9 @@ img {
         margin-top: 0.5rem;
       }
     }
+  }
+
+  & > .bottom {
   }
 }
 

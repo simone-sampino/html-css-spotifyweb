@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/7a46f3fa7f.js" crossorigin="anonymous"></script>
     <title>Spotify Web</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
     <div class="wrapper">
-        <!-- Main Top -->
+        <!-- Wrapper Top -->
         <div class="top">
             <div class="sidebar">
                 <!-- Sidebar Top -->
@@ -22,7 +23,7 @@
                     <!-- Menu -->
                     <div class="main-menu">
                         <ul>
-                            <li><img src="./img/home.svg" alt="home">
+                            <li><span class="line"></span><img src="./img/home.svg" alt="home">
                                 <span class="t-white">Home</span>
                             </li>
                             <li><img src="./img/search.svg" alt="search">
@@ -188,7 +189,41 @@
             </main>
         </div>
 
-        <div class="bottom"></div>
+        <!-- Wrapper Bottom -->
+        <div class="bottom">
+            <figure>
+                <img src="./img/sinister.jpeg" alt="sinister">
+                <figcaption>
+                    Sinister
+                    <span>Brano<br>Nome</span>
+                </figcaption>
+            </figure>
+
+            <div class="interactions">
+                <i class="fa-regular fa-heart"></i>
+                <i class="fa-regular fa-folder"></i>
+            </div>
+
+            <div class="player">
+                <i class="fa-solid fa-shuffle"></i>
+                <i class="fa-solid fa-backward-step"></i>
+                <i class="fa-regular fa-circle-play"></i>
+                <i class="fa-solid fa-forward-step"></i>
+                <i class="fa-solid fa-rotate-right"></i>
+
+                <div class="running-time">
+                    0:25<span class="playback-progress"></span>4:35
+                </div>
+            </div>
+
+            <div class="options">
+                <i class="fa-solid fa-list"></i>
+                <i class="fa-solid fa-desktop"></i>
+                <i class="fa-solid fa-volume-high"></i>
+            </div>
+
+
+        </div>
     </div>
 
 </body>
