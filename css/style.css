@@ -12,8 +12,8 @@
   --dark: #000;
   --gray: #73757b;
   --primary: #141922;
-  --secondary: #282828; /* serve? */
-  --semi-transparent: rgba(8, 11, 18, 0.5);
+  --secondary: #282828;
+  --semi-transparent: rgba(8, 11, 18, 0.7);
   --lines: #adff2f;
 }
 /* #endregion Root */
@@ -26,6 +26,10 @@ body {
 
 ul {
   list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 img {
@@ -45,11 +49,7 @@ img {
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -1rem;
-}
-
-[class^="col"] {
-  padding: 0 1rem;
+  margin-bottom: 2rem;
 }
 
 .col {
@@ -109,22 +109,6 @@ img {
 }
 /* #endregion Utils */
 
-/* Debug */
-body * {
-  /* border: 1px dashed red; */
-}
-
-.row {
-  margin-bottom: 2rem;
-}
-
-/* .col-6 {
-  background-color: blue;
-  min-height: 100px;
-  width: 100px;
-  margin: 5px;
-} */
-
 /* Body */
 .wrapper {
   height: 100vh;
@@ -133,7 +117,7 @@ body * {
 
   /* Wrapper Top */
   & > .top {
-    height: calc(100% - 70px);
+    height: calc(100% - 60px);
     display: flex;
 
     /* Sidebar */
@@ -141,6 +125,7 @@ body * {
       background-color: var(--dark);
       height: 100%;
       width: 50px;
+      padding: 0.3rem 0;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -148,8 +133,6 @@ body * {
       color: var(--gray);
 
       .top {
-        margin-top: 0.3rem;
-
         #logo-small {
           margin-bottom: 0.5rem;
         }
@@ -160,7 +143,7 @@ body * {
       }
 
       img {
-        width: 1rem;
+        width: 1.3rem;
       }
 
       span,
@@ -170,7 +153,19 @@ body * {
 
       .bottom {
         .download {
-          margin: 0 5px;
+          img {
+            width: 0.7rem;
+            margin: 0 0 1rem 0.3rem;
+          }
+        }
+
+        hr {
+          display: none;
+        }
+
+        .profile {
+          background-color: var(--gray);
+          border-radius: 50%;
         }
       }
     }
@@ -183,11 +178,23 @@ body * {
       overflow-y: auto;
 
       .upgrade {
+        text-transform: uppercase;
+        text-align: end;
         background-color: var(--semi-transparent);
+        padding-top: 0.9rem;
         min-height: 50px;
         width: calc(100% - 50px);
         position: fixed;
         z-index: 100;
+
+        a {
+          color: var(--light);
+          border: 1px solid var(--light);
+          border-radius: 50px;
+          padding: 0.5rem 1rem;
+          margin-right: 1.5rem;
+          font-size: 0.7rem;
+        }
       }
 
       .navbar {
@@ -198,9 +205,20 @@ body * {
           flex-wrap: wrap;
           justify-content: center;
           text-transform: uppercase;
+          color: var(--gray);
           font-size: 0.5rem;
           gap: 1rem;
+
+          li:first-child {
+            padding-bottom: 0.1rem;
+            border-bottom: 1px solid var(--lines);
+          }
         }
+      }
+
+      img {
+        margin-top: 1.5rem;
+        margin-right: 10px;
       }
 
       figcaption {
@@ -208,12 +226,18 @@ body * {
         font-weight: 600;
         text-align: center;
         margin-top: 0.6rem;
+      }
 
-        span {
-          display: block;
-          color: var(--gray);
-          font-size: 0.55rem;
-          margin: 0.5rem 0;
+      span {
+        display: block;
+        color: var(--gray);
+        font-size: 0.55rem;
+        margin: 0.5rem 0;
+      }
+
+      .most-popular {
+        img {
+          border-radius: 50%;
         }
       }
     }
@@ -221,8 +245,8 @@ body * {
 
   /* Wrapper Bottom */
   & > .bottom {
-    background-color: brown;
-    height: 70px;
+    background-color: var(--secondary);
+    height: 60px;
   }
 }
 
