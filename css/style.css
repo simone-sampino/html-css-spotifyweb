@@ -221,6 +221,7 @@ img {
 
           :hover {
             color: var(--light);
+            cursor: pointer;
           }
 
           li:first-child {
@@ -279,6 +280,11 @@ img {
         img {
           margin-top: 1rem;
         }
+      }
+
+      span {
+        color: var(--light-gray);
+        font-size: 0.55rem;
       }
 
       .most-popular {
