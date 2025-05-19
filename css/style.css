@@ -193,6 +193,10 @@ img {
         position: fixed;
         z-index: 100;
 
+        &:hover {
+          transform: scale(1.05);
+        }
+
         a {
           color: var(--light);
           border: 1px solid var(--light);
@@ -231,11 +235,10 @@ img {
           margin-bottom: 1.5rem;
         }
 
-        figure {
+        .play {
           position: relative;
 
           i {
-            font-size: 2rem;
             position: absolute;
             top: 50%;
             left: 50%;
@@ -243,19 +246,23 @@ img {
             display: none;
           }
 
-          :hover {
+          &:hover {
+            opacity: 0.6;
+
             i {
               display: inline-block;
+              cursor: pointer;
             }
           }
         }
       }
 
       img {
-        margin-bottom: 0.8rem;
+        max-width: 95%;
       }
 
       figcaption {
+        margin-top: 0.8rem;
         font-size: 0.7rem;
         font-weight: 600;
         text-align: center;
@@ -312,12 +319,19 @@ img {
 
         span {
           color: var(--light-gray);
+
+          &:hover {
+            color: var(--light);
+            text-decoration: underline;
+            cursor: pointer;
+          }
         }
       }
     }
 
     i {
       font-size: 0.7rem;
+      cursor: pointer;
     }
 
     .interactions {
@@ -350,6 +364,11 @@ img {
           width: 20px;
           height: 5px;
           border-radius: 10px;
+          cursor: pointer;
+
+          &:hover {
+            background-color: var(--lines);
+          }
         }
 
         span:first-child {
@@ -368,6 +387,10 @@ img {
       .fa-circle-play {
         font-size: 1.3rem;
         margin: -0.2rem 0.3rem;
+
+        &:hover {
+          transform: scale(1.05);
+        }
       }
     }
 
@@ -394,6 +417,11 @@ img {
         width: 15px;
         height: 5px;
         border-radius: 10px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: var(--lines);
+        }
       }
     }
   }
@@ -405,6 +433,10 @@ img {
   .container {
     width: 90%;
     max-width: 400px;
+  }
+
+  .wrapper .top main .upgrade {
+    width: calc(100% - 230px);
   }
 
   .wrapper .top .sidebar {
