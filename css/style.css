@@ -309,6 +309,7 @@ img {
 
     span {
       font-size: 0.55rem;
+      display: block;
     }
 
     figure {
@@ -615,9 +616,68 @@ img {
   }
   /* #endregion Cols Utils */
 
+  html {
+    font-size: 20px;
+  }
+
   .container {
     width: 90%;
     max-width: 750px;
+  }
+
+  .wrapper {
+    .bottom {
+      .interactions {
+        margin: 1.5rem 2.5rem;
+      }
+
+      .player {
+        gap: 3rem;
+
+        .running-time {
+          width: 280px;
+
+          .progress {
+            width: 50px;
+
+            &:hover .track-dot {
+              left: 45px;
+            }
+          }
+
+          span:first-child {
+            left: -30px;
+          }
+
+          span:nth-child(2) {
+            left: 290px;
+          }
+        }
+      }
+
+      .options {
+        margin-left: 1rem;
+        margin-right: 6rem;
+
+        .volume {
+          top: 4px;
+          left: 75px;
+          width: 80px;
+
+          .increasing {
+            width: 25px;
+
+            &:hover .volume-dot {
+              left: 20px;
+            }
+          }
+        }
+      }
+
+      span {
+        display: inline;
+      }
+    }
   }
 }
 
