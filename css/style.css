@@ -332,6 +332,10 @@ img {
     i {
       font-size: 0.7rem;
       cursor: pointer;
+
+      &:hover {
+        color: var(--light);
+      }
     }
 
     .interactions {
@@ -506,6 +510,7 @@ img {
 
         :hover {
           color: var(--light);
+          cursor: pointer;
         }
       }
     }
@@ -514,6 +519,7 @@ img {
       .download {
         :hover {
           color: var(--light);
+          cursor: pointer;
         }
 
         img {
